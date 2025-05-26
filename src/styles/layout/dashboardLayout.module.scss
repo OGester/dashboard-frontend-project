@@ -41,25 +41,19 @@
 .mainContainer {
   grid-area: main;
   background-color: rgb(18, 94, 69);
-  color: variable.$color-fire;
-  font-size: variable.$font-xl;
-  text-align: center;
+  padding: 0.5rem;
 }
 
 .statsContainer {
   grid-area: stats;
   background-color: rgb(59, 101, 87);
-  color: variable.$color-fire;
-  font-size: variable.$font-xl;
-  text-align: center;
+  padding: 0.5rem;
 }
 
 .bottomContainer {
   grid-area: bottom;
   background-color: rgb(1, 83, 59);
-  color: variable.$color-fire;
-  font-size: variable.$font-xl;
-  text-align: center;
+  padding: 0.5rem;
 }
 
 //MEDIA QUERIES
