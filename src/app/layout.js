@@ -1,8 +1,8 @@
 import "../styles/globals.scss";
 
 export const metadata = {
-  title: "INTERGALACTIC INC.",
-  description: "Welcome to our part of the galaxy!",
+  title: "About Me",
+  description: "Welcome to my corner of the galaxy!",
 };
 
 export const viewport = {
