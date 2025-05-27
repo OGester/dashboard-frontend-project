@@ -3,12 +3,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 
 .flexContainer {
-  background-color: rgb(169, 168, 168);
+  //background-color: rgb(169, 168, 168);
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  //justify-content: center;
+  align-items: center;
   height: 100%;
-  padding: 0.5rem;
   gap: 1rem;
+}
+
+.circles {
+  background-image: url("/topbarLeft.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%; /* 👈 This is the key */
+  background-position: center; /* Or whatever aligns best */
+  width: 9rem; /* optional width */
+  height: 10rem; /* required to give it vertical space */
+
+  /*  background-image: url("/topbarLeft.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15rem;
+  height: 15rem; */
+  //background-color: rgba(178, 179, 179, 0.407);
+}
+
+@media (width < 600px) {
+  .circles {
+    width: 4.5rem;
+    height: 5rem;
+  }
 }

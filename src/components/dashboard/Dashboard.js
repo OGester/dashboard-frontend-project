@@ -1,6 +1,7 @@
 import styles from "../../styles/layout/dashboardLayout.module.scss";
 import TopBar from "./top/topBar";
 import SideBar from "./side/sideComponent";
+import AboutMe from "./aboutMe/aboutMeComponent";
 
 export default async function Dashboard() {
   return (
@@ -12,7 +13,9 @@ export default async function Dashboard() {
         <div className={styles.leftContainer}>
           <SideBar />
         </div>
-        <div className={styles.mainContainer}>main section here</div>
+        <div className={styles.mainContainer}>
+          <AboutMe />
+        </div>
         <div className={styles.statsContainer}>stats section here</div>
         <div className={styles.bottomContainer}>bottom here</div>
       </div>

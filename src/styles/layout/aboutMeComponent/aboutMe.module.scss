@@ -1,0 +1,55 @@
+@use "../../variables" as variable;
+
+@import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
+
+.flexContainer {
+  background-color: variable.$color-gray-dark;
+  border: 2px solid variable.$color-gray-caviar;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 0;
+  //gap: 0.5rem;
+}
+
+.header {
+  color: variable.$color-success;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 0.5px;
+  //background-color: rgba(240, 128, 128, 0.281);
+}
+
+.dummy {
+  color: variable.$color-text;
+  font-size: variable.$font-xl;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  //background-color: rgba(78, 107, 107, 0.194);
+}
+
+@media (width < 600px) {
+  .header {
+    font-size: 2.5rem;
+  }
+  .dummy {
+    font-size: variable.$font-md;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (width < 900px) and (width >= 600px) {
+  .header {
+    font-size: 3.5rem;
+  }
+  .dummy {
+    font-size: variable.$font-lg;
+    //padding: 0 0.5rem;
+  }
+}

@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 
 .dashboardContainer {
-  background-color: rgb(239, 208, 251);
+  --child-color: rgba(41, 41, 41, 0.065);
+  background-color: variable.$primaryBg;
   padding: 1rem;
   min-height: 100vh;
   min-height: 100dvh;
-  //min-height: 100%;
 }
 
 .grid {
@@ -18,42 +18,39 @@
     "head head head stats"
     "side main main stats"
     "side main main stats"
+    "side main main stats"
+    "side main main stats"
     "side bottom bottom bottom";
 
-  min-height: 95dvh;
+  min-height: 90dvh;
   margin-top: 0.5rem;
 
-  align-content: stretch;
+  align-content: center;
 }
 
 .topContainer {
   grid-area: head;
-  background-color: rgb(128, 228, 195);
-  padding: 0.5rem;
+  background-color: var(--child-color);
 }
 
 .leftContainer {
   grid-area: side;
-  background-color: rgb(50, 82, 72);
-  padding: 0.5rem;
+  background-color: var(--child-color);
 }
 
 .mainContainer {
   grid-area: main;
-  background-color: rgb(18, 94, 69);
-  padding: 0.5rem;
+  background-color: var(--child-color);
 }
 
 .statsContainer {
   grid-area: stats;
-  background-color: rgb(59, 101, 87);
-  padding: 0.5rem;
+  background-color: var(--child-color);
 }
 
 .bottomContainer {
   grid-area: bottom;
-  background-color: rgb(1, 83, 59);
-  padding: 0.5rem;
+  background-color: var(--child-color);
 }
 
 //MEDIA QUERIES
@@ -78,12 +75,15 @@
 
 @media (width < 900px) and (width >= 600px) {
   .grid {
-    //--column-count: 3;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 8rem 1fr 1fr;
     grid-template-areas:
-      "head head"
-      "side main"
-      "side stats"
-      "bottom bottom";
+      "head head head"
+      "head head head"
+      "side main main"
+      "side main main"
+      "side main main"
+      "side main main"
+      "side stats stats"
+      "bottom bottom bottom";
   }
 }
