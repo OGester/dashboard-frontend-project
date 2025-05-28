@@ -38,9 +38,17 @@ html {
   padding: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-style: normal;
+  text-wrap: balance;
+}
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
 }
 
 .link {

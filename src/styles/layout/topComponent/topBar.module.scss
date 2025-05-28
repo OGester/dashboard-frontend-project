@@ -3,34 +3,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 
 .flexContainer {
-  //background-color: rgb(169, 168, 168);
+  background-image: url("/topBackground.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-inline-start: 4px solid;
+  border-block-end: 4px solid;
+  border-block-start: 4px solid;
+  border-image-source: radial-gradient(
+    circle at left,
+    variable.$color-gray-jet,
+    transparent 60%
+  );
+  border-image-slice: 1;
+  /*  border-radius: 1rem;
+  padding-left: 0.5rem; */
+  padding: 0.5rem;
   display: flex;
+  flex-basis: auto;
   flex-direction: row;
   align-items: center;
-  height: 100%;
-  gap: 1rem;
+  //justify-content: space-between;
+  max-height: 40rem;
+  gap: 0.5rem;
 }
 
 .circles {
-  background-image: url("/topbarLeft.svg");
-  background-repeat: no-repeat;
-  background-size: auto 100%; /* 👈 This is the key */
-  background-position: center; /* Or whatever aligns best */
-  width: 9rem; /* optional width */
-  height: 10rem; /* required to give it vertical space */
-
-  /*  background-image: url("/topbarLeft.svg");
+  background-image: url("/circles2.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center left;
+  flex-grow: 1;
   width: 15rem;
-  height: 15rem; */
+  height: 9rem;
   //background-color: rgba(178, 179, 179, 0.407);
 }
 
+.myName {
+  background-color: variable.$color-gray-dark;
+
+  flex-grow: 2;
+  width: 25rem;
+  height: 9rem;
+  background-color: rgba(178, 179, 179, 0.08);
+}
+
 @media (width < 600px) {
+  .flexContainer {
+    border-inline-start: 2px solid;
+    border-block-end: 2px solid;
+    border-block-start: 2px solid;
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+  }
   .circles {
-    width: 4.5rem;
+    width: 6rem;
     height: 5rem;
+  }
+  .myName {
+    width: 12rem;
+    height: 6rem;
   }
 }
