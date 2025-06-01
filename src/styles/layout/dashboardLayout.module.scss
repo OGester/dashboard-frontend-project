@@ -5,10 +5,8 @@
 .wrapper {
   --child-color: rgba(134, 81, 81, 0.445);
   background-color: variable.$primaryBg;
-  //display: grid;
-  //place-content: center;
-  //margin-inline: auto;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .grid {
