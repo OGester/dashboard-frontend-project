@@ -1,4 +1,4 @@
-import styles from "../../../styles/layout/statsComponent/stats.module.scss";
+import styles from "../../../styles/layout/stats/statsComponent.module.scss";
 
 export default async function () {
   return <div className={styles.flexContainer}></div>;

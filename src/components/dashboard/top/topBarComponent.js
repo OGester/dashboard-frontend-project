@@ -1,4 +1,4 @@
-import styles from "../../../styles/layout/topComponent/topBar.module.scss";
+import styles from "../../../styles/layout/top/topBarComponent.module.scss";
 
 export default function TopBar() {
   return (

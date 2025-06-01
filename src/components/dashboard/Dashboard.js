@@ -1,23 +1,27 @@
 import styles from "../../styles/layout/dashboardLayout.module.scss";
-import TopBar from "./top/topBar";
-import SideBar from "./side/sideComponent";
-import AboutMe from "./aboutMe/aboutMeComponent";
+//import TopBar from "./top/topBar";
+//import SideBar from "./side/sideComponent";
+//import AboutMe from "./aboutMe/aboutMeComponent";
 
 export default async function Dashboard() {
   return (
-    <div className={styles.dashboardContainer}>
+    <div className={styles.wrapper}>
       <div className={styles.grid}>
         <div className={styles.topContainer}>
-          <TopBar />
+          <p>My Name here</p>
         </div>
         <div className={styles.leftContainer}>
-          <SideBar />
+          <p>Side stuff here</p>
         </div>
         <div className={styles.mainContainer}>
-          <AboutMe />
+          <p>About me here</p>
         </div>
-        <div className={styles.statsContainer}>stats section here</div>
-        <div className={styles.bottomContainer}>bottom here</div>
+        <div className={styles.statsContainer}>
+          <p>stats section here</p>
+        </div>
+        <div className={styles.bottomContainer}>
+          <p>bottom here</p>
+        </div>
       </div>
     </div>
   );

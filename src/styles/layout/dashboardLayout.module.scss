@@ -2,34 +2,33 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 
-.dashboardContainer {
-  --child-color: rgba(41, 41, 41, 0.065);
+.wrapper {
+  --child-color: rgba(134, 81, 81, 0.445);
   background-color: variable.$primaryBg;
-  padding: 1rem;
+  //display: grid;
+  //place-content: center;
+  //margin-inline: auto;
   min-height: 100vh;
-  min-height: 100dvh;
 }
 
 .grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: 10rem 1fr 1fr 15rem;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
   grid-template-areas:
-    "head head head stats"
-    "side main main stats"
-    "side main main stats"
-    "side main main stats"
-    "side main main stats"
-    "side bottom bottom bottom";
+    "myName"
+    "side"
+    "about"
+    "stats"
+    "bottomCon";
 
-  min-height: 90dvh;
-  margin-top: 0.5rem;
-
-  align-content: center;
+  padding-block: 2rem;
+  width: min(95%, 80rem);
+  margin-inline: auto;
 }
 
 .topContainer {
-  grid-area: head;
+  grid-area: myName;
   background-color: var(--child-color);
 }
 
@@ -39,7 +38,7 @@
 }
 
 .mainContainer {
-  grid-area: main;
+  grid-area: about;
   background-color: var(--child-color);
 }
 
@@ -49,12 +48,12 @@
 }
 
 .bottomContainer {
-  grid-area: bottom;
+  grid-area: bottomCon;
   background-color: var(--child-color);
 }
 
 //MEDIA QUERIES
-
+/* 
 @media (width < 600px) {
   .dashboardContainer {
     padding: 0.5rem;
@@ -87,3 +86,4 @@
       "bottom bottom bottom";
   }
 }
+ */
