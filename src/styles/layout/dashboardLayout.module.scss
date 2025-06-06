@@ -13,60 +13,92 @@
   display: grid;
   gap: 1.5rem;
   grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
   grid-template-areas:
-    "myName"
-    "side"
-    "about"
-    "stats"
-    "bottomCon";
+    "header"
+    "sidebar"
+    "about_box"
+    "stats_box"
+    "bottom_box"
+    "footer";
 
   padding-block: 2rem;
-  width: min(95%, 80rem);
+  width: min(95%, 85rem);
   margin-inline: auto;
 }
 
-.topContainer {
-  grid-area: myName;
-  background-color: var(--child-color);
+.header,
+.sidebar,
+.about_box,
+.stats_box,
+.bottom_box,
+.footer {
+  font-size: variable.$font-xxl;
+  color: variable.$color-error;
+  background-color: variable.$hover-light;
+  font-weight: 600;
+  text-align: center;
 }
 
-.leftContainer {
-  grid-area: side;
-  background-color: var(--child-color);
+.header {
+  grid-area: header;
 }
 
-.mainContainer {
-  grid-area: about;
-  background-color: var(--child-color);
+.sidebar {
+  grid-area: sidebar;
 }
 
-.statsContainer {
-  grid-area: stats;
-  background-color: var(--child-color);
+.about_box {
+  grid-area: about_box;
 }
 
-.bottomContainer {
-  grid-area: bottomCon;
-  background-color: var(--child-color);
+.stats_box {
+  grid-area: stats_box;
+}
+
+.bottom_box {
+  grid-area: bottom_box;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 //MEDIA QUERIES
+@media screen and (min-width: 50em) {
+  .grid {
+    grid-template-areas:
+      "header header  header header"
+      "about_box about_box about_box sidebar"
+      "about_box about_box about_box sidebar"
+      "stats_box stats_box stats_box stats_box"
+      "bottom_box bottom_box bottom_box bottom_box"
+      "footer footer footer footer";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .grid {
+    grid-template-areas:
+      "header header header header header"
+      "stats_box about_box about_box about_box sidebar"
+      "stats_box about_box about_box about_box sidebar"
+      "stats_box about_box about_box about_box sidebar"
+      "bottom_box bottom_box bottom_box bottom_box sidebar"
+      "footer footer footer footer footer";
+  }
+}
 /* 
 @media (width < 600px) {
-  .dashboardContainer {
-    padding: 0.5rem;
-  }
-
+ 
   .grid {
-    grid-template-columns: 1fr;
     grid-template-areas:
-      "head"
-      "side"
-      "stats"
-      "main"
-      "bottom";
-    gap: 0.5rem;
-    min-height: 95svh;
+    "header"
+    "sidebar"
+    "about-box"
+    "stats-box"
+    "bottom-box"
+    "footer";
   }
 }
 
