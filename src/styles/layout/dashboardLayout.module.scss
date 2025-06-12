@@ -35,13 +35,14 @@
 .footer {
   font-size: variable.$font-xxl;
   color: variable.$color-error;
-  background-color: variable.$hover-light;
+  background-color: variable.$color-gray-caviar;
   font-weight: 600;
   text-align: center;
 }
 
 .header {
   grid-area: header;
+  border-radius: 3px 3px 10px 3px;
 }
 
 .sidebar {
@@ -75,6 +76,9 @@
       "bottom_box bottom_box bottom_box bottom_box"
       "footer footer footer footer";
   }
+  /*  .header {
+    min-height: 217px;
+  } */
 }
 
 @media screen and (min-width: 75em) {
@@ -87,6 +91,10 @@
       "bottom_box bottom_box bottom_box bottom_box sidebar"
       "footer footer footer footer footer";
   }
+  /*  .header {
+    min-height: 200px;
+    max-width: 1400px;
+  } */
 }
 /* 
 @media (width < 600px) {
